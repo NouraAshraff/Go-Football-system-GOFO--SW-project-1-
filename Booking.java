@@ -15,10 +15,11 @@ public class Booking {
     }
 
 
-    public Booking(String place,String date)
+    public Booking(String place,String date,Playground p)
     {
         this.place=place;
         this.date=date;
+        
     }
 
     public void setPlace(String place) {

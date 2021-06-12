@@ -1,5 +1,7 @@
 package GOFO;
 
+import java.util.ArrayList;
+
 public class Playground {
     private String name;
     private String location;
@@ -9,10 +11,10 @@ public class Playground {
     private double cancellationPeriod;
     private String feedback;
     private String status;
-    static String slots[]= {"Slot1","Slot2","Slot3","Slot4","Slot5","Slot6","Slot7","Slot8","Slot9","Slot10",
+    public static String slots[]= {"Slot1","Slot2","Slot3","Slot4","Slot5","Slot6","Slot7","Slot8","Slot9","Slot10",
             "Slot11","Slot12","Slot13","Slot14","Slot15","Slot16","Slot17","Slot18","Slot19","Slot20",
             "Slot21","Slot22","Slot23","Slot24"};
-
+    public String availableSlots[];
     public Playground()
     {
         name="";
@@ -25,6 +27,9 @@ public class Playground {
         status="";
 
     }
+    public static ArrayList<Playground> playgrounds = new ArrayList<Playground>();
+
+    public static int  playgroundCount=0;
     public Playground(String name,String location,int availableHours,String size,float pricePerHour,float cancellationPeriod)
     {
         this.name=name;
@@ -33,13 +38,15 @@ public class Playground {
         this.size=size;
         this.pricePerHour=pricePerHour;
         this.cancellationPeriod=cancellationPeriod;
-
-        String availableSlots[]=new String[availableHours];
-        for(int i=0;i<availableHours;i++){
-            availableSlots[i]=slots[i];
-        }
-
+        this.feedback="";
+        this.status="";
+        playgrounds.add(playgroundCount++, this);
+        this.availableSlots=new String[availableHours];
+    
+ 
     }
+    
+    
 
 
 
