@@ -8,6 +8,8 @@ public abstract class User {
     private String password;
     private String nationalId;
     private String phoneNumber;
+    String getUserName;
+    String getPgetPassword;
 
     public User()
     {
