@@ -1,13 +1,18 @@
 package GOFO;
 
+import java.util.Vector;
+
 public class Player extends User {
     private Ewallet ewallet=new Ewallet();
     private Booking[] bookings=new Booking[100];
     private String[] favTeam= new String[11];
+    public static Vector<Player> players = new Vector<Player>();
 
-
+int pcount=0;
     public Player(String userName, String address, String email, String password, String nationalId, String phoneNumber) {
         super(userName, address, email, password, nationalId, phoneNumber);
+        players.add(pcount++, this);
+        
     }
 
     public void setEwallet(Ewallet ewallet) {

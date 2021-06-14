@@ -49,8 +49,8 @@ public class Playground {
                 for(int n=0;n<this.availableHours;n++){
                     this.availableSlots[n]=Playground.slots[n];
                 }
-        this.s=new Slot[this.availableHours-1];
-        for(int i=0;i<this.availableHours-1;i++){
+        this.s=new Slot[this.availableHours];
+        for(int i=0;i<this.availableHours;i++){
             s[i]=new Slot(this.size*2);
         }
     }
